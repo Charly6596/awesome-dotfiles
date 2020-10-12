@@ -97,7 +97,7 @@ floating_terminal = "xst -c fst" -- clients with class "fst" are set to be float
 browser = "firefox"
 filemanager = "pcmanfm"
 tmux = terminal .. " -e tmux new "
-editor = "vim"
+editor = "nvim"
 --editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal.." -e "..editor.." "
 
@@ -429,7 +429,6 @@ mymainmenu = awful.menu({ items = {
         "copyq",  -- Includes session name in class.
     },
     class = {
-        "mpv",
         "Gpick",
         "Lxappearance",
         "Nm-connection-editor",
@@ -640,6 +639,7 @@ end
     { rule_any = {
         class = {
             "feh",
+            "mpv",
             "Sxiv",
         },
         -- }, properties = { floating = true },
@@ -731,7 +731,6 @@ end
             { rule_any = {
                 class = {
                     "mpvtube",
-                    "mpv",
                 },
             }, properties = { screen = 1, tag = awful.screen.focused().tags[9] },
             callback = function (c)

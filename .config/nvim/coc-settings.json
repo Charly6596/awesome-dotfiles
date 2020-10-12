@@ -1,0 +1,112 @@
+{
+  "pairs.enableCharacters": ["(", "[", "{", "'", "\"", "`"],
+  "languageserver": {
+    "haskell": {
+      "command": "haskell-language-server-wrapper",
+      "args": ["--lsp"],
+      "rootPatterns": [
+        "*.cabal",
+        "stack.yaml",
+        "cabal.project",
+        "package.yaml",
+        "hie.yaml"
+      ],
+      "filetypes": ["haskell", "lhaskell"]
+    }
+  },
+  "suggest.noselect": false,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "javascriptreact",
+    "typescript.tsx",
+    "graphql"
+  ],
+  "coc.preferences.bracketEnterImprove": true,
+  "coc.preferences.formatOnInsertLeave": true,
+  "typescript.preferences.quoteStyle": "auto",
+  "typescript.preferences.useAliasesForRenames": false,
+  "typescript.format.semicolons": "insert",
+  "typescript.format.insertSpaceAfterCommaDelimiter": true,
+  "typescript.format.insertSpaceBeforeAndAfterBinaryOperators": true,
+  "todolist.enable": true,
+  "todolist.maxsize": 5000,
+  "todolist.dateFormat": "DD-MM-YYYY HH:mm",
+  "todolist.autoUpload": false,
+  "todolist.easyMode": true,
+  "todolist.notify": "virtual",
+  "explorer.icon.enableNerdfont": true,
+  "explorer.quitOnOpen": true,
+  "explorer.position": "left",
+  "explorer.file.showHiddenFiles": true,
+  "explorer.file.column.clip.copy": "",
+  "explorer.file.column.clip.cut": "",
+  "explorer.file.hiddenRules": {
+    "extensions": ["o", "a", "obj", "pyc"],
+    "filenames": [],
+    "patternMatches": ["^node_modules$"]
+  },
+  "explorer.width": 30,
+  "explorer.keyMappings": {
+    "gk": "expandablePrev",
+    "gj": "expandableNext",
+
+    "<space>": "toggleSelection",
+    "<tab>": "actionMenu",
+
+    "h": "collapse",
+    "<CR>": ["expandable?", "expand", "open"],
+    "J": ["toggleSelection", "nodeNext"],
+    "K": ["toggleSelection", "nodePrev"],
+    "<2-LeftMouse>": [
+      "expandable?",
+      ["expanded?", "collapse", "expand"],
+      "open"
+    ],
+    "o": ["expanded?", "collapse", "expand"],
+    "<leader>p": ["expandable?", "cd", "open"],
+    "H": "open:split",
+    "S": "open:split:plain",
+    "V": "open:vsplit",
+    "t": "open:tab",
+    "<bs>": "gotoParent",
+
+    "gp": "preview:labeling",
+    "Y": "copyFile",
+    "X": "cutFile",
+    "P": "pasteFile",
+    "dd": "delete",
+
+    "T": "addFile",
+    "D": "addDirectory",
+    "r": "rename",
+
+    ".": "toggleHidden",
+    "R": "refresh",
+
+    "?": "help",
+    "q": "quit",
+    "<esc>": "esc",
+    "!": "systemExecute",
+    "gd": "listDrive",
+
+    "f": "search",
+    "F": "searchRecursive",
+
+    "gf": "gotoSource:file",
+    "gb": "gotoSource:buffer",
+
+    "[[": "sourcePrev",
+    "]]": "sourceNext",
+
+    "[d": "diagnosticPrev",
+    "]d": "diagnosticNext",
+
+    "[c": "gitPrev",
+    "]c": "gitNext",
+    "<<": "gitStage",
+    ">>": "gitUnstage"
+  }
+}

@@ -1,8 +1,17 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:/var/lib/snapd/snap/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/usr/share/oh-my-zsh
+
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+export ANDROID_HOME=$ANDROID_SDK_ROOT
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$HOME/.ghcup/bin
+export JAVA_HOME=/usr/lib/jvm/default
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -260,3 +269,4 @@ bindkey "^[[1;5C" forward-word
 # lxterminal doesnt detect diff between backspace and ctrl + backspace
 #bindkey "^?" backward-kill-word
 
+source /usr/share/nvm/init-nvm.sh
