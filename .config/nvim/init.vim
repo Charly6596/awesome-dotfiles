@@ -476,7 +476,7 @@ nnoremap <leader>feR :source ~/.config/nvim/init.vim<CR>
 function CompileAndExecHS()
   let fileName = expand('%:t:r')
   let fileNameExtension = expand('%')
-  let command = printf("!xst -e sh -c 'ghc %s; ./%s; read -p \"Press any key to continue...\"' &", fileNameExtension, fileName)
+  let command = printf("!kitty -e sh -c 'ghc %s; ./%s; read -p \"Press any key to continue...\"' &", fileNameExtension, fileName)
   execute command
 endfunction
 
@@ -484,7 +484,7 @@ endfunction
 function OpenInterpreterHS()
   let filePath = expand('%:p:h')
   let file = expand('%:t')
-  let command = printf("!xst -e sh -c 'cd %s; ghci %s' &", filePath, file)
+  let command = printf("!kitty -e sh -c 'cd %s; ghci %s' &", filePath, file)
   execute command
 endfunction
 
@@ -507,4 +507,17 @@ function ToggleTexVimwiki()
 endfunction
 
 autocmd FileType vimwiki inoremap <C-a> <ESC>:call ToggleTexVimwiki()<CR><CR>
+
+function CompileArm()
+  let fileName = expand('%:t:r')
+  echom system("make-arm " . fileName)
+endfunction
+
+function SendToRPI()
+  let fileName = expand('%:t:r') . '.img'
+  echom system("send-to-rpi " . fileName)
+endfunction
+
+autocmd FileType r nmap <silent> <F7> :call CompileArm()<CR>
+autocmd FileType r nmap <silent> <F5> :call SendToRPI()<CR>
 

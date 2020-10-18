@@ -1,8 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:/var/lib/snapd/snap/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-export ZSH=/usr/share/oh-my-zsh
+export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk
 export ANDROID_HOME=$ANDROID_SDK_ROOT
@@ -10,7 +8,9 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$HOME/.ghcup/bin
+
+# Path to your oh-my-zsh installation.
+export ZSH=/usr/share/oh-my-zsh
 export JAVA_HOME=/usr/lib/jvm/default
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -174,8 +174,6 @@ cont(){
   fi
 }
 
-export WEECHAT_HOME="~/.config/weechat"
-
 export EDITOR=nvim
 export BROWSER=firefox
 
@@ -200,9 +198,8 @@ alias ff='firefox'
 #alias c="while sleep 1;do tput sc;tput cup 0 $(($(tput cols)-29));date;tput rc;done &; clear"
 
 alias netprocs="lsof -P -i -n"
-alias up="sudo apt update && sudo apt upgrade"
 # So that sudo doesnt override aliases (doesnt work with flags)
-# alias sudo='sudo '
+alias sudo='sudo '
 
 # neovim
 alias vim="nvim"
@@ -216,12 +213,12 @@ alias zshrc="vim ~/.zshrc"
 # alias polyconf="vim ~/.config/polybar/config"
 # alias dunstrc="vim ~/.config/dunst/dunstrc"
 # alias tint2rc="vim ~/.config/tint2/tint2rc"
-alias userChrome.css="vim ~/thm/Firefox/userChrome.css"
+# alias userChrome.css="vim ~/thm/Firefox/userChrome.css"
 # alias stconf="vim ~/pro/xst/src/config.h"
-alias playlists="vim ~/.config/mpv/tubify_playlists"
-alias airlinevim="vim ~/.config/nvim/plugged/vim-airline/autoload/airline/themes/dark.vim"
+# alias playlists="vim ~/.config/mpv/tubify_playlists"
+# alias airlinevim="vim ~/.config/nvim/plugged/vim-airline/autoload/airline/themes/dark.vim"
 # alias quteconf="vim ~/.config/qutebrowser/config.py"
-alias comptonconf="vim ~/.config/compton/compton.conf"
+# alias comptonconf="vim ~/.config/compton/compton.conf"
 # alias rc.lua="vim ~/.config/awesome/rc.lua"
 alias theme.lua="vim ~/.config/awesome/themes/reasons/theme.lua"
 alias awesomeconf="vim ~/.config/awesome/rc.lua"

@@ -1,0 +1,5 @@
+screen -d -m -S rpi /dev/ttyUSB0 115200
+sleep 0.5
+screen -S rpi -X exec \!\! sz -X $1
+sleep 0.5
+pkill screen
